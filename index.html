@@ -10,7 +10,17 @@
     <div class="container">
         <h1>Weather App</h1>
         <form id="weatherForm">
-            <input type="text" id="cityInput" placeholder="Enter city Name" required>
+            <div style="margin-bottom: 10px;">
+                <label><input type="radio" name="mode" value="city" checked> City Name</label>
+                <label><input type="radio" name="mode" value="coords"> Coordinates</label>
+            </div>
+            <div id="cityMode">
+                <input type="text" id="cityInput" placeholder="Enter city Name">
+            </div>
+            <div id="coordsMode" style="display:none;">
+                <input type="number" id="latInput" placeholder="Latitude" step="any">
+                <input type="number" id="lonInput" placeholder="Longitude" step="any">
+            </div>
             <button type="submit">Get Weather</button>
         </form>
         <div id="weatherResult" class="weather-result"></div>
